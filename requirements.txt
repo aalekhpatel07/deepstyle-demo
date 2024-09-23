@@ -1,0 +1,5 @@
+tensorflow==2.0
+transformers==2.4.1
+h5py==2.10.0
+fastapi
+uvicorn[standard]

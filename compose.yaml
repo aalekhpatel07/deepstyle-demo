@@ -1,0 +1,18 @@
+services:
+  deepstyle:
+    image: aalekhpatel07/deepstyle
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    ports:
+      - "80"
+  qdrant:
+    image: "qdrant/qdrant"
+  indexer:
+    image: aalekhpatel07/deepstyle-indexer
+    build:
+      context: .
+      dockerfile: Dockerfile.indexer
+    volumes:
+      - ./main.py:/app/main.py
+
